@@ -25,4 +25,4 @@ sudo sed -i "/server_name _/a add_header X-Served-By $HOSTNAME;" /etc/nginx/site
 sudo nginx -t
 
 # Restart nginx after implementing changes
-sudo service nginx restart
+sudo service nginx restart0-custom_http_response_header
