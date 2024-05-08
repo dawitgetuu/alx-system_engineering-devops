@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Adds the SSH public key below to your server so that we can connect using the ubuntu user.
+ssh_key='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDPuWtjBRI1b8Qp6uATGJvoM7KBJlvT7Xd127dJPdIVnS4dIeFclsu78sa7Q5Fv4WHzXhO0H7FUQ8f4wtoJSfYLlyvEBoY2adpEVUluM6CNZq78hKwluBM95lXYipU4UgBK5XSmpRr/9m/szuDS9mkWP4rQwQpsCy2OvJWF89jLQHWR30wpT/sdpuAMFgS+j7YisClkAYqouZjSvTGb6Izer7fp+y1EQ2tR/xjN8K1/q/HsACI97qaMz7E+oG7wNzOBhq6lC0/rs5lyQYLeMjaWQZYP3qxjFE8zeuXKYIOzXAficlkrhHYiqIsXt+YSZ9EV1ZQd44pj1baKwIpiZ93P0O13q6oX4IwIKyREWe5iD7nc94sHTXwBi+uVui3BGOJfI2xQ+azK2c11ElQ9+Qm7/SZVzyUwY08MIYmsRZW1meilIdixJkaweZ92Qs+04XezsvwkY/VcrLZm+bfq/IkXL3x5pnIKHJIhoOaxM6KnI6Skt25HyBIsKOmx7eILkUU'
+# This runs a one-off command in the ssh session and logs out when done
+# ssh remote_server "one-off command"
+ssh ubuntu@18.204.11.186 "echo $ssh_key >> ~/.ssh/authorized_keys"
